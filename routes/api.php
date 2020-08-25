@@ -29,3 +29,7 @@ Route::post('country', 'country\CountryController@countrySave');
 Route::put('country/{id}', 'country\CountryController@countryUpdate');
 //delete
 Route::delete('country/{id}', 'country\CountryController@countryDelete');
+
+//Route::apiResource('country', 'country\Country');
+
+
