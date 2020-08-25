@@ -34,4 +34,20 @@ public function countrySave(Request $request)
 
 }
 
+
+public function countryUpdate(Request $request , Country $country)
+{
+    $country->update($request->all());
+    return response()->json($country, 200);
+
+}
+
+public function countryDelete(Request $request, Country $country)
+{
+$country->delete();
+return response()->json(null, 204);
+
+
+}
+
 }
