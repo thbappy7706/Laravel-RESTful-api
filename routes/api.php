@@ -19,17 +19,37 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 
-Route::get('country', 'country\CountryController@country');
+//Route::get('country', 'country\CountryController@country');
+////find
+//Route::get('country/{id}', 'country\CountryController@countryById');
+//
+////create
+//Route::post('country', 'country\CountryController@countrySave');
+////edit-update
+//Route::put('country/{id}', 'country\CountryController@countryUpdate');
+////delete
+//Route::delete('country/{id}', 'country\CountryController@countryDelete');
+//
+////Route::apiResource('country', 'country\Country');
+
+
+
+Route::group(['middleware'=>'auth.api'], function (){
+
+
+    Route::get('country', 'country\CountryController@country');
 //find
-Route::get('country/{id}', 'country\CountryController@countryById');
+    Route::get('country/{id}', 'country\CountryController@countryById');
 
 //create
-Route::post('country', 'country\CountryController@countrySave');
+    Route::post('country', 'country\CountryController@countrySave');
 //edit-update
-Route::put('country/{id}', 'country\CountryController@countryUpdate');
+    Route::put('country/{id}', 'country\CountryController@countryUpdate');
 //delete
-Route::delete('country/{id}', 'country\CountryController@countryDelete');
+    Route::delete('country/{id}', 'country\CountryController@countryDelete');
 
 //Route::apiResource('country', 'country\Country');
 
+
+});
 
