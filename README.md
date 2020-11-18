@@ -78,3 +78,14 @@
 510 Not Extended<br/>
 511 Network Authentication Required<br/>
 599 Network Connect Timeout Error<br/>
+
+
+##Script Testing
+//pm.variables.get();
+//pm.variables.set();
+
+//pm.globals.get();
+//pm.globals.set();
+
+//pm.environment.get();
+//pm.environment.set();
